@@ -1,0 +1,352 @@
+:root {
+  --main: #002D4C;
+  --primary: #222;
+  --secondary: #444;
+  --light-dark-color: #888;
+  --light-border: #eee;
+  --active-color: #032B4B;
+  --yellow: #EAEA2F;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: var(--primary);
+}
+
+nav {
+  padding: 15px 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+h1 {
+  color: var(--main);
+  margin-bottom: 5px;
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 600px;
+  flex-wrap: wrap;
+}
+
+#container {
+  padding: 4em 8em;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+
+#breadcrumbs {
+  color: var(--light-dark-color);
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+#main-image {
+  width: 400px;
+  border-radius: 5px;
+}
+
+#right-side {
+  display: flex;
+  flex-direction: column;  
+}
+
+#left-side {
+  border-top: 0;
+  border-right: 1px solid var(--light-border);
+  border-left: 1px solid var(--light-border);
+  border-bottom: 8px solid var(--main);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+
+  padding: 0 20px;
+}
+
+footer {
+  background-color: var(--main);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* CSS relativos aos steps do formulário */
+.form-step {
+  display: none;
+}
+
+button {
+  margin-top: 10px;
+}
+
+button.prev-step {
+  margin-right: 10px;
+}
+
+.step-indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.step-number-container {
+  position: relative;
+  display: inline-block; 
+}
+
+.step {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+.step.active {
+  width: 30px;
+  height: 30px;
+}
+
+.step-circle {
+  background-color: #eee;
+  border: 1px solid var(--light-dark-color);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  width: 20px;
+}
+
+.step-circle.active {
+  background-color: var(--active-color);
+  line-height: 30px;
+  width: 30px;
+}
+
+.step-number {
+  color: var(--light-dark-color);
+  font-size: 11px;
+}
+
+.step-number.active {
+  color: var(--yellow);
+  font-size: 14px;
+}
+
+.step-number-container:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 60%;
+  left: 100%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 120px;
+  background-color: #ccc;
+}
+
+.step-name {
+  color: var(--light-dark-color);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.step-name.active {
+  color: var(--secondary);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* CSS relativo aos inputs do formulário */
+.form-group {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.form-title-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--primary);
+  padding-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.custom-radio {
+  margin-top: 10px;
+}
+
+.custom-radio input[type="radio"] {
+  display: none;
+  margin-top: 50px;
+}
+
+
+.custom-radio input[type="radio"] + label {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px; 
+  padding-top: 4px; 
+
+  cursor: pointer;
+}
+
+.custom-radio input[type="radio"] + label:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--active-color);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.custom-radio input[type="radio"]:checked + label:before {
+  border: 2px solid;
+  border-color: #fff; 
+  background-color: var(--active-color); 
+}
+
+/* Ícone de confirmação */
+.custom-radio input[type="radio"]:checked + label:before {
+  border: 1px solid var(--active-color);
+  content: "\2713"; /* Símbolo de confirmação */
+  color: white; 
+  font-size: 12px; 
+  text-align: center;
+  line-height: 14px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input[type="text"] {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--light-border);
+  margin-top: 4px;
+}
+
+input[type="text"]::-webkit-input-placeholder{
+  color: var(--light-dark-color);
+  font-size: 14px;
+}
+
+select {
+  padding: 5px 2px;
+  border-radius: 4px;
+  border: 1px solid var(--light-border);
+  margin-top: 4px;
+
+  font-size: 14px;
+  width: 100%;
+}
+
+.multiselect {
+  width: 100%;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  position: absolute;
+  border: 1px #dadada solid;
+  width: 100%;
+  background-color: white;
+  height: 150px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#checkboxes label {
+  display: block;
+  padding: 5px;
+  border-bottom: 1px solid var(--light-border);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#checkboxes label:last-child {
+  border-bottom: 0;
+}
+
+#checkboxes label span {
+  margin-left: 2px;
+}
+
+
+#checkboxes-container {
+  position: relative;
+  width: 100%;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-step {
+  background-color: var(--active-color);
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+.prev-step {
+  background-color: white;
+  padding: 12px;
+  border-radius: 5px;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  cursor: pointer;
+
+}
