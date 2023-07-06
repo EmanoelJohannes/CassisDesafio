@@ -13,4 +13,4 @@ Projeto realizado para seleção da empresa Cassis, feito utilizando apenas HTML
 
 ## Demonstração
 
-![image](https://github.com/EmanoelJohannes/CassisDesafio/assets/31702528/29a8f4cc-36c8-4810-9033-f8be03917527)
+![image](https://github.com/EmanoelJohannes/CassisDesafio/assets/31702528/ca04f544-cc0f-49e4-a754-1dfd85d9c1e4)
