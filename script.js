@@ -1,3 +1,4 @@
+// Código responsável por mostrar checkboxs dentro do select input, e atualizar o valor selecionado
 var expanded = false;
 
 function showCheckboxes() {
@@ -35,45 +36,32 @@ function updateSelectedOptions() {
 
 $(document).ready(function () {
 
-  // Capturar os elementos de entrada
-  var tipoInput = $('input[name="tipo"]');
-  var nomeInput = $('input[name="nome"]');
-  var cpfInput = $('input[name="cpf"]');
-  var prestadorSelect = $('select[name="prestador"]');
-  var especialidadeCheckboxes = $('#checkboxes input[type="checkbox"]');
-  
-  // Verificar o preenchimento dos campos ao alterar o valor
-  tipoInput.on('change', checkFormCompletion);
-  nomeInput.on('input', checkFormCompletion);
-  cpfInput.on('input', checkFormCompletion);
-  prestadorSelect.on('change', checkFormCompletion);
-  especialidadeCheckboxes.on('change', checkFormCompletion);
-  
-  // Função para verificar o preenchimento dos campos
-  function checkFormCompletion() {
-    var isTipoSelected = tipoInput.filter(':checked').length > 0;
-    var isNomeFilled = nomeInput.val().trim() !== '';
-    var isCpfFilled = cpfInput.val().trim() !== '';
-    var isPrestadorSelected = prestadorSelect.val() !== '';
-    var isEspecialidadeSelected = especialidadeCheckboxes.filter(':checked').length > 0;
-    
-    var isFormComplete = isTipoSelected && isNomeFilled && isCpfFilled && isPrestadorSelected && isEspecialidadeSelected;
-    
-    // Habilitar ou desabilitar o botão "Próximo" com base no preenchimento do formulário
-    $('.next-step').prop('disabled', !isFormComplete);
-  }
+  // Mascaras dos inputs
+  $('#cpf-cnpj').mask('000.000.000-00');
+  $('#cep').mask('00.000-000');
+  $('#numero').mask('0000');
+  $('#celular').mask('(00) 00000-0000');
+  $('#fixo').mask('(00) 00000-0000');
 
+  // Alteração de CPF/CNPJ de acordo com o tipo selecionado (fisica ou juridica)
+  $('input[name="tipo"]').on('change', function() {
+    var tipo = $(this).val();
+    var label = $('#label-cpf-cnpj');
+    var input = $('#cpf-cnpj');
 
+    if (tipo === 'cnpj') {
+      label.text('* CNPJ');
+      input.mask('00.000.000/0000-00');
+      input.attr('placeholder', '00.000.000/0000-00');
 
+    } else {
+      label.text('* CPF');
+      input.mask('000.000.000-00');
+      input.attr('placeholder', '000.000.000-00');
+    }
+  });
 
-
-
-
-
-
-
-
-
+  // Código responsável pela lógica dos steps do formulário
   var currentStep = 0;
   var formSteps = $(".form-step");
   var steps = $(".step");
@@ -139,4 +127,104 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+
+
+
+  // Area "drag and drop" e seletor de arquivos
+  var dropArea = $('#drop-area');
+  var fileSelector = $('#custom-file-selector');
+  var fileInput = $('<input type="file">');
+  var fileCounter = $('#file-counter');
+  var fileCount = 0;
+  var previewContainer = $('#preview-container');
+
+  dropArea.on('dragover', function(e) {
+    e.preventDefault();
+    dropArea.addClass('dragged');
+  });
+
+  dropArea.on('dragleave', function() {
+    dropArea.removeClass('dragged');
+  });
+
+  dropArea.on('drop', function(e) {
+    e.preventDefault();
+    dropArea.removeClass('dragged');
+  
+    var files = e.originalEvent.dataTransfer.files;
+    handleFiles(files);
+  });
+
+  fileSelector.on('click', function() {
+    fileInput.click();
+  });
+
+  fileInput.on('change', function(e) {
+    var files = e.target.files;
+    handleFiles(files);
+  });
+
+  // Função para lidar com os arquivos, mostrando seu preview e aumentando o contador
+  function handleFiles(files) {
+    for (var i = 0; i < files.length; i++) {
+      var previewElement = createPreviewElement(files[i]);
+      previewContainer.append(previewElement);
+    }
+    
+    fileCount += files.length;
+    fileCounter.text(fileCount + '/2 arquivos anexados');
+  }
+
+  function createPreviewElement(file) {
+    var previewElement = $('<div class="preview">');
+    var previewText = $('<span class="preview-text">');
+
+    previewText.text(file.name);
+    previewElement.append(previewText);
+
+    return previewElement;
+  }
+
+  // Contador do text area
+  $('#observacoes').on('input', function() {
+    var text = $(this).val();
+    var count = text.length;
+    $('#charCount').text(count + '/800 caracteres');
+  });
+
+
+  // Modal e botão vertical
+  $('.openModalButton').click(function() {
+    $('#modalOverlay').fadeIn();
+    $('#modal').css('right', '0');
+  });
+
+  $('#closeModalButton').click(function() {
+    $('#modalOverlay').fadeOut();
+    $('#modal').css('right', '-400px');
+  });
+
+  $(".faq-toggle").click(function() {
+    $(this).next(".faq-content").slideToggle();
+    $(this).addClass('activeToggle')
+    $(this).find('.fa-toggle').toggleClass('rotate');
+
+  });
+  
+  $(".close").click(function() {
+    $("#myModal").hide();
+  });
+  
+  $("openModalButton").click(function() {
+    $("#myModal").show();
+  });
+
+  $('#modalOverlay').click(function(event) {
+    if (event.target === this) {
+      $('#modalOverlay').fadeOut();
+      $('#modal').css('right', '-400px');
+
+    }
+  });
+
 });
