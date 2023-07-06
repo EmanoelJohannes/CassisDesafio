@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Carrossel de Imagens</title>
+    <title>Desafio Cassis</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="import" href="teste.html" />
 
@@ -53,442 +53,446 @@
       </div>
 
       <div id="left-side">
-        <div class="step-indicator">
-          <div class="step-number-container active">
-            <div class="step">
-              <div class="step-circle">
-                <span class="step-number">1</span>
-              </div>
-              <span class="step-name">Dados</span>
-            </div>
-          </div>
+        <form action="#">
 
-          <div class="step-number-container">
-            <div class="step">
-              <div class="step-circle">
-                <span class="step-number">2</span>
-              </div>
-              <span class="step-name">Endereço</span>
-            </div>
-          </div>
-
-          <div class="step-number-container">
-            <div class="step">
-              <div class="step-circle">
-                <span class="step-number">3</span>
-              </div>
-              <span class="step-name">Contato</span>
-            </div>
-          </div>
-
-          <div class="step-number-container">
-            <div class="step">
-              <div class="step-circle">
-                <span class="step-number">4</span>
-              </div>
-              <span class="step-name">Confirmação</span>
-            </div>
-          </div>
-
-          <div class="step-number-container">
-            <div class="step">
-              <div class="step-circle">
-                <span class="step-number">5</span>
-              </div>
-              <span class="step-name">Anexos</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-step">
-          <div class="form-group">
-            <label class="form-title-label" for="tipo">* Tipo</label>
-
-            <div class="row custom-radio">
-              <div class="align-center">
-                <input type="radio" id="cpf" name="tipo" value="cpf" checked />
-                <label class="form-label" for="cpf">Pessoa Física</label>
-              </div>
-
-              <div class="align-center">
-                <input type="radio" id="cnpj" name="tipo" value="cnpj" />
-                <label class="form-label" for="cnpj">Pessoa Jurídica</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="grid-2">
-              <div class="column">
-                <label class="form-title-label" for="nome">* Nome</label>
-                <input
-                  type="text"
-                  name="nome"
-                  placeholder="Informe o nome..."
-                />
-              </div>
-
-              <div class="column">
-                <label
-                  class="form-title-label"
-                  id="label-cpf-cnpj"
-                  for="cpf-cnpj"
-                  >* CPF</label
-                >
-                <input
-                  type="text"
-                  id="cpf-cnpj"
-                  name="cpf-cnpj"
-                  placeholder="000.000.000-00"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="column">
-              <label class="form-title-label" for="cpf">
-                * Tipo de prestador
-              </label>
-              <select name="prestador">
-                <option value="" selected>Selecione o tipo...</option>
-                <option value="Medico">Medico</option>
-                <option value="Fisioterapeuta">Fisioterapeuta</option>
-                <option value="Nutricionista">Nutricionista</option>
-                <option value="Psicólogo">Psicólogo(a)</option>
-                <option value="Terapia">Terapia Ocupacional</option>
-                <option value="Outros">Outros</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="column">
-              <label class="form-title-label" for="cpf">* Especialidade</label>
-              <div class="multiselect">
-                <div class="selectBox" onclick="showCheckboxes()">
-                  <select id="mySelect">
-                    <option>Selecionar especialidade...</option>
-                  </select>
-                  <div class="overSelect"></div>
+          <div class="step-indicator">
+            <div class="step-number-container active">
+              <div class="step">
+                <div class="step-circle">
+                  <span class="step-number">1</span>
                 </div>
-                <div id="checkboxes-container">
-                  <div id="checkboxes">
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>acumputura</span>
-                    </label>
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>alergia e imunologia</span>
-                    </label>
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>anestesiologia</span>
-                    </label>
+                <span class="step-name">Dados</span>
+              </div>
+            </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>aparelhos e objetos...</span>
-                    </label>
+            <div class="step-number-container">
+              <div class="step">
+                <div class="step-circle">
+                  <span class="step-number">2</span>
+                </div>
+                <span class="step-name">Endereço</span>
+              </div>
+            </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>assistencia a pessoas...</span>
-                    </label>
+            <div class="step-number-container">
+              <div class="step">
+                <div class="step-circle">
+                  <span class="step-number">3</span>
+                </div>
+                <span class="step-name">Contato</span>
+              </div>
+            </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cardiologia</span>
-                    </label>
+            <div class="step-number-container">
+              <div class="step">
+                <div class="step-circle">
+                  <span class="step-number">4</span>
+                </div>
+                <span class="step-name">Confirmação</span>
+              </div>
+            </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cirurgia cardiovascular</span>
-                    </label>
+            <div class="step-number-container">
+              <div class="step">
+                <div class="step-circle">
+                  <span class="step-number">5</span>
+                </div>
+                <span class="step-name">Anexos</span>
+              </div>
+            </div>
+          </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cirurgia da mão</span>
-                    </label>
+          
+          <div class="form-step">
+            <div class="form-group">
+              <label class="form-title-label" for="tipo">* Tipo</label>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cirurgia cabeça e ...</span>
-                    </label>
+              <div class="row custom-radio">
+                <div class="align-center">
+                  <input type="radio" id="cpf" name="tipo" value="cpf" checked />
+                  <label class="form-label" for="cpf">Pessoa Física</label>
+                </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cirurgia do aparelho...</span>
-                    </label>
+                <div class="align-center">
+                  <input type="radio" id="cnpj" name="tipo" value="cnpj" />
+                  <label class="form-label" for="cnpj">Pessoa Jurídica</label>
+                </div>
+              </div>
+            </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cirurgia geral</span>
-                    </label>
+            <div class="form-group">
+              <div class="grid-2">
+                <div class="column">
+                  <label class="form-title-label" for="nome">* Nome</label>
+                  <input
+                    type="text"
+                    name="nome"
+                    placeholder="Informe o nome..."
+                  />
+                </div>
 
-                    <label>
-                      <input
-                        type="checkbox"
-                        onclick="updateSelectedOptions()"
-                      />
-                      <span>cirurgia pediatrica</span>
-                    </label>
+                <div class="column">
+                  <label
+                    class="form-title-label"
+                    id="label-cpf-cnpj"
+                    for="cpf-cnpj"
+                    >* CPF</label
+                  >
+                  <input
+                    type="text"
+                    id="cpf-cnpj"
+                    name="cpf-cnpj"
+                    placeholder="000.000.000-00"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="column">
+                <label class="form-title-label" for="cpf">
+                  * Tipo de prestador
+                </label>
+                <select name="prestador">
+                  <option value="" selected>Selecione o tipo...</option>
+                  <option value="Medico">Medico</option>
+                  <option value="Fisioterapeuta">Fisioterapeuta</option>
+                  <option value="Nutricionista">Nutricionista</option>
+                  <option value="Psicólogo">Psicólogo(a)</option>
+                  <option value="Terapia">Terapia Ocupacional</option>
+                  <option value="Outros">Outros</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="column">
+                <label class="form-title-label" for="cpf">* Especialidade</label>
+                <div class="multiselect">
+                  <div class="selectBox" onclick="showCheckboxes()">
+                    <select id="mySelect">
+                      <option>Selecionar especialidade...</option>
+                    </select>
+                    <div class="overSelect"></div>
+                  </div>
+                  <div id="checkboxes-container">
+                    <div id="checkboxes">
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>acumputura</span>
+                      </label>
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>alergia e imunologia</span>
+                      </label>
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>anestesiologia</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>aparelhos e objetos...</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>assistencia a pessoas...</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cardiologia</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cirurgia cardiovascular</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cirurgia da mão</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cirurgia cabeça e ...</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cirurgia do aparelho...</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cirurgia geral</span>
+                      </label>
+
+                      <label>
+                        <input
+                          type="checkbox"
+                          onclick="updateSelectedOptions()"
+                        />
+                        <span>cirurgia pediatrica</span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="form-group">
-            <div class="buttons-container">
-              <button class="prev-step" disabled>Anterior</button>
-              <button class="next-step">Próximo</button>
+            <div class="form-group">
+              <div class="buttons-container">
+                <button class="prev-step" disabled>Anterior</button>
+                <button class="next-step">Próximo</button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="form-step">
-          <div class="form-group">
-            <div class="grid-2" style="grid-template-columns: 1fr 2fr">
-              <div class="column">
-                <label class="form-title-label" for="cep">* CEP</label>
-                <input
-                  type="text"
-                  name="nome"
-                  id="cep"
-                  placeholder="00.000-000"
-                />
+          <div class="form-step">
+            <div class="form-group">
+              <div class="grid-2" style="grid-template-columns: 1fr 2fr">
+                <div class="column">
+                  <label class="form-title-label" for="cep">* CEP</label>
+                  <input
+                    type="text"
+                    name="nome"
+                    id="cep"
+                    placeholder="00.000-000"
+                  />
+                </div>
+
+                <div class="column">
+                  <label class="form-title-label" for="endereco"
+                    >* Endereço</label
+                  >
+                  <input
+                    type="text"
+                    name="endereco"
+                    placeholder="Informe o endereço..."
+                  />
+                </div>
               </div>
+            </div>
 
+            <div class="form-group">
+              <div class="grid-2" style="grid-template-columns: 1fr 2fr">
+                <div class="column">
+                  <label class="form-title-label" for="uf">* Estado</label>
+                  <select name="estados">
+                    <option value="">UF...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                  </select>
+                </div>
+
+                <div class="column">
+                  <label class="form-title-label" for="cidade">* Cidade</label>
+                  <input
+                    type="text"
+                    name="cidade"
+                    placeholder="Informe a cidade..."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="grid-2">
+                <div class="column">
+                  <label class="form-title-label" for="bairro">* Bairro</label>
+                  <input
+                    type="text"
+                    name="bairro"
+                    placeholder="Informe o bairro..."
+                  />
+                </div>
+
+                <div class="column">
+                  <label class="form-title-label" for="numero">* Número</label>
+                  <input
+                    type="text"
+                    id="numero"
+                    name="numero"
+                    placeholder="Informe o número..."
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
               <div class="column">
-                <label class="form-title-label" for="endereco"
-                  >* Endereço</label
+                <label class="form-title-label" for="complemento"
+                  >Complemento</label
                 >
                 <input
                   type="text"
-                  name="endereco"
-                  placeholder="Informe o endereço..."
+                  name="complemento"
+                  placeholder="Informe o complemento..."
                 />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="grid-2" style="grid-template-columns: 1fr 2fr">
-              <div class="column">
-                <label class="form-title-label" for="uf">* Estado</label>
-                <select name="estados">
-                  <option value="">UF...</option>
-                  <option value="AC">Acre</option>
-                  <option value="AM">Amazonas</option>
-                  <option value="BA">Bahia</option>
-                  <option value="CE">Ceará</option>
-                  <option value="DF">Distrito Federal</option>
-                  <option value="ES">Espírito Santo</option>
-                  <option value="GO">Goiás</option>
-                </select>
-              </div>
-
-              <div class="column">
-                <label class="form-title-label" for="cidade">* Cidade</label>
-                <input
-                  type="text"
-                  name="cidade"
-                  placeholder="Informe a cidade..."
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="grid-2">
-              <div class="column">
-                <label class="form-title-label" for="bairro">* Bairro</label>
-                <input
-                  type="text"
-                  name="bairro"
-                  placeholder="Informe o bairro..."
-                />
-              </div>
-
-              <div class="column">
-                <label class="form-title-label" for="numero">* Número</label>
-                <input
-                  type="text"
-                  id="numero"
-                  name="numero"
-                  placeholder="Informe o número..."
-                />
-              </div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="column">
-              <label class="form-title-label" for="complemento"
-                >Complemento</label
-              >
-              <input
-                type="text"
-                name="complemento"
-                placeholder="Informe o complemento..."
-              />
-            </div>
-          </div>
-
-          <div class="buttons-container">
-            <button class="prev-step">Anterior</button>
-            <button class="next-step">Próximo</button>
-          </div>
-        </div>
-
-        <div class="form-step">
-          <div class="form-group">
-            <div class="column">
-              <label class="form-title-label" for="contato"
-                >* Nome para contato</label
-              >
-              <input
-                type="text"
-                name="contato"
-                placeholder="Informe o nome..."
-              />
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="grid-2" style="margin-bottom: 4px">
-              <div class="column">
-                <label class="form-title-label" for="bairro"
-                  >Telefone celular</label
-                >
-                <input
-                  type="text"
-                  name="celular"
-                  id="celular"
-                  placeholder="(00) 00000-0000"
-                />
-              </div>
-
-              <div class="column">
-                <label class="form-title-label" for="numero"
-                  >Telefone fixo</label
-                >
-                <input
-                  type="text"
-                  id="fixo"
-                  name="fixo"
-                  placeholder="(00) 00000-0000"
-                />
-              </div>
-            </div>
-            <span class="hint"
-              >(Obrigatório informar pelo menos um telefone)</span
-            >
-          </div>
-
-          <div class="form-group">
-            <div class="column">
-              <label class="form-title-label" for="email">* E-mail</label>
-              <input
-                type="text"
-                name="email"
-                placeholder="Informe o e-mail..."
-              />
-            </div>
-          </div>
-
-          <div class="buttons-container">
-            <button class="prev-step">Anterior</button>
-            <button class="next-step">Próximo</button>
-          </div>
-        </div>
-
-        <div class="form-step">
-          <div class="recaptcha">
-            <span>Confirme que você é humano:</span>
-            <div class="g-recaptcha" data-sitekey="CASSIS_TESTE"></div>
-          </div>
-
-          <div class="buttons-container">
-            <button class="prev-step">Anterior</button>
-            <button class="next-step">Próximo</button>
-          </div>
-        </div>
-
-        <div class="form-step">
-          <div class="space-between">
-            <p class="form-title-label">Anexar arquivos</p>
-            <div class="info">
-              <div class="circle">?</div>
-              <div class="document-text openModalButton">
-                Documentação necessária
-              </div>
-            </div>
-          </div>
-
-          <div id="drop-area">
-            <div class="drop-instructions">
-              <span class="file-selector" id="custom-file-selector">
-                Arraste ou selecione um arquivo (4mb por arquivo)
-              </span>
-              <div id="preview-container"></div>
-
-              <span class="hint" id="file-counter">0/2 arquivos anexados</span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <div class="column">
-              <label class="form-title-label" for="observacoes"
-                >Observações (opcional)</label
-              >
-              <div class="textarea-container">
-                <textarea id="observacoes" rows="4"></textarea>
-                <span class="hint" id="charCount">0/800 caracteres</span>
               </div>
             </div>
 
             <div class="buttons-container">
               <button class="prev-step">Anterior</button>
-              <button class="next-step">Enviar</button>
+              <button class="next-step">Próximo</button>
             </div>
           </div>
-        </div>
+
+          <div class="form-step">
+            <div class="form-group">
+              <div class="column">
+                <label class="form-title-label" for="contato"
+                  >* Nome para contato</label
+                >
+                <input
+                  type="text"
+                  name="contato"
+                  placeholder="Informe o nome..."
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="grid-2" style="margin-bottom: 4px">
+                <div class="column">
+                  <label class="form-title-label" for="bairro"
+                    >Telefone celular</label
+                  >
+                  <input
+                    type="text"
+                    name="celular"
+                    id="celular"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+
+                <div class="column">
+                  <label class="form-title-label" for="numero"
+                    >Telefone fixo</label
+                  >
+                  <input
+                    type="text"
+                    id="fixo"
+                    name="fixo"
+                    placeholder="(00) 00000-0000"
+                  />
+                </div>
+              </div>
+              <span class="hint"
+                >(Obrigatório informar pelo menos um telefone)</span
+              >
+            </div>
+
+            <div class="form-group">
+              <div class="column">
+                <label class="form-title-label" for="email">* E-mail</label>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Informe o e-mail..."
+                />
+              </div>
+            </div>
+
+            <div class="buttons-container">
+              <button class="prev-step">Anterior</button>
+              <button class="next-step">Próximo</button>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <div class="recaptcha">
+              <span>Confirme que você é humano:</span>
+              <div class="g-recaptcha" data-sitekey="CASSIS_TESTE"></div>
+            </div>
+
+            <div class="buttons-container">
+              <button class="prev-step">Anterior</button>
+              <button class="next-step">Próximo</button>
+            </div>
+          </div>
+
+          <div class="form-step">
+            <div class="space-between">
+              <p class="form-title-label">Anexar arquivos</p>
+              <div class="info">
+                <div class="circle">?</div>
+                <div class="document-text openModalButton">
+                  Documentação necessária
+                </div>
+              </div>
+            </div>
+
+            <div id="drop-area">
+              <div class="drop-instructions">
+                <span class="file-selector" id="custom-file-selector">
+                  Arraste ou selecione um arquivo (4mb por arquivo)
+                </span>
+                <div id="preview-container"></div>
+
+                <span class="hint" id="file-counter">0/2 arquivos anexados</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="column">
+                <label class="form-title-label" for="observacoes"
+                  >Observações (opcional)</label
+                >
+                <div class="textarea-container">
+                  <textarea id="observacoes" rows="4"></textarea>
+                  <span class="hint" id="charCount">0/800 caracteres</span>
+                </div>
+              </div>
+
+              <div class="buttons-container">
+                <button class="prev-step">Anterior</button>
+                <button class="next-step" type="submit">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
 
       <button class="vertical-button openModalButton">
