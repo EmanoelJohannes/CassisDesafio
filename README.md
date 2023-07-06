@@ -1,5 +1,8 @@
 # Projeto de seleção - Cassis
 
+# Live preview
+https://emanoeljohannes.github.io/CassisDesafio/
+
 ## Descrição
 
 Projeto realizado para seleção da empresa Cassis, feito utilizando apenas HTML, CSS, Javascript e Jquery puros, sem auxílio de bibliotecas de interface externas.
